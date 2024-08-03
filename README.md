@@ -15,11 +15,12 @@ Each token should move in a clockwise direction at different speeds.
 ### Card Hover Animation:
 The card should slightly move with an animation on hover.
 
-### Install dependencies
+## Install
+
+### Dependencies
 ```sh
 yarn install
 ```
-
 ### Run the project
 ```sh
 yarn run dev
