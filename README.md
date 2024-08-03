@@ -20,11 +20,11 @@ This project involves implementing a form with email using Vuelidate validation 
     - The card should slightly move with an animation on hover.
 
 ## Install dependencies
-    ```sh
-    yarn install
-    ```
+```sh
+yarn install
+```
 
 ## Run the project
-    ```sh
-    yarn run dev
-    ```
+```sh
+yarn run dev
+```
