@@ -4,15 +4,15 @@ This project involves implementing a form with email using Vuelidate validation 
 
 ## Task description
 
-**Email Field Validation:**
+### Email Field Validation:
 The email field in the form must be validated according to standard rules.
-**Graphical Block Animations:**
+### Graphical Block Animations:
 All elements in the graphical block (axes, tokens, card) must appear with animations.
-**Token Placement:**
+### Token Placement:
 Tokens should appear on their respective axes in random positions and sequentially.
-**Token Movement:**
+### Token Movement:
 Each token should move in a clockwise direction at different speeds.
-**Card Hover Animation:**
+### Card Hover Animation:
 The card should slightly move with an animation on hover.
 
 ### Install dependencies
