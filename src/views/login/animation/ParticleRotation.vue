@@ -63,21 +63,22 @@ const scenePreset = () => {
   const radius = orbit.value.offsetWidth / 2;
 
   images.value.forEach((node, index) => {
-    const radiantAngle =
-      (segmentMathRandom(360, props.icons.length, index) * Math.PI) / 180;
+    const sections = props.icons.length;
+    const radians =
+      (segmentMathRandom(360, sections, index) * Math.PI) / 180; // x° * π / 180°
     gsap.set(node, {
       scale: '0',
-      x: radius + Math.cos(radiantAngle) * radius,
-      y: radius + Math.sin(radiantAngle) * radius,
+      x: radius + Math.cos(radians) * radius,
+      y: radius + Math.sin(radians) * radius,
     });
   });
 };
 
-const segmentMathRandom = (maxVal, segments, current) => {
-  const sectionSize = Math.floor(maxVal / segments);
+const segmentMathRandom = (maxDeg, sections, current) => {
+  const sectionSize = Math.floor(maxDeg / sections);
   const max = sectionSize * (current + 1);
   const min = sectionSize * current;
-  return getMathRandom(min, max);
+  return getMathRandom(min, max); //return random x° value based on the value between min° and max° for the current section. 
 };
 
 const getMathRandom = (min, max) => {
