@@ -1,6 +1,6 @@
-<script setup lang="ts">
-import LoginAnimation from './LoginAnimation.vue';
+<script setup>
 import LoginForm from './LoginForm.vue';
+import LoginAnimation from './LoginAnimation.vue';
 </script>
 
 <template>

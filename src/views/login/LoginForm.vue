@@ -72,9 +72,9 @@ const stateReset = () => {
           @blur="$v.email.$touch"
           :disabled="onSubmit"
         />
-        <template v-for="error of $v.email.$errors" :key="error.$uid">
-          <div class="error-msg">{{ error.$message }}</div>
-        </template>
+        <div v-if="$v.email.$errors.length" class="error-msg">
+          {{ $v.email.$errors[0].$message }}
+        </div>
       </div>
       <div :class="[{ error: $v.name.$errors.length }, 'input-wrapper mb-3']">
         <input
@@ -84,9 +84,9 @@ const stateReset = () => {
           @blur="$v.name.$touch"
           :disabled="onSubmit"
         />
-        <template v-for="error of $v.name.$errors" :key="error.$uid">
-          <div class="error-msg">{{ error.$message }}</div>
-        </template>
+        <div v-if="$v.name.$errors.length" class="error-msg">
+          {{ $v.name.$errors[0].$message }}
+        </div>
       </div>
       <button
         type="submit"
