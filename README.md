@@ -1,5 +1,30 @@
-# Vue 3 + Vite
+# Project: Coin login
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This project involves implementing a form with email using Vuelidate validation and a graphical block with animations using GSAP.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Task description
+
+1. **Email Field Validation**
+    - The email field in the form must be validated according to standard rules.
+
+2. **Graphical Block Animations**
+    - All elements in the graphical block (axes, tokens, card) must appear with animations.
+
+3. **Token Placement**
+    - Tokens should appear on their respective axes in random positions and sequentially.
+
+4. **Token Movement**
+    - Each token should move in a clockwise direction at different speeds.
+
+5. **Card Hover Animation**
+    - The card should slightly move with an animation on hover.
+
+## Install dependencies
+    ```sh
+    yarn install
+    ```
+
+## Run the project
+    ```sh
+    yarn run dev
+    ```
