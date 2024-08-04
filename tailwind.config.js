@@ -16,7 +16,6 @@ module.exports = {
       },
       backgroundSize: {
         'size-200': '200% 200%',
-        'size-600': '600% 600%',
       },
       backgroundPosition: {
         'pos-passive': '0% 90%',

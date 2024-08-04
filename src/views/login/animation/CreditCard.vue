@@ -34,12 +34,21 @@ onMounted(() => {
   );
   tl.play();
 });
+
+const onMouseEnter = () => {
+  gsap.to(card.value, { rotate: '3deg' });
+};
+const onMouseLeave = () => {
+  gsap.to(card.value, { rotate: '-6deg' });
+};
 </script>
 
 <template>
   <div
     ref="card"
-    class="z-10 w-[0%] h-[0%] rounded-[100%] transition-[background-position] duration-[3s] bg-gradient-to-r bg-size-600 hover:bg-pos-hover from-yellow-300 via-fuchsia-400 to-cyan-300 test"
+    class="z-10 w-[0%] h-[0%] rounded-[100%] transition-[background-position] duration-[3s] bg-gradient-to-br from-yellow-300 via-yellow-400 to-amber-500"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
   ></div>
   <img ref="fog" class="-z-20 absolute" src="/fog.png" alt="fog" />
 </template>
