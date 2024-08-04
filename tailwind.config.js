@@ -15,11 +15,15 @@ module.exports = {
         appear: 'appear 500ms ease-in-out',
       },
       backgroundSize: {
-        'size-400': '400% 400%',
+        'size-200': '200% 200%',
+        'size-600': '600% 600%',
       },
       backgroundPosition: {
-        'pos-passive': '50% 0%',
-        'pos-hover': '0% 20%',
+        'pos-passive': '0% 90%',
+        'pos-hover': '100% 20%',
+      },
+      maxWidth: {
+        md: '426px',
       },
     },
   },

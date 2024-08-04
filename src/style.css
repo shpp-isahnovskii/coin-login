@@ -12,7 +12,7 @@
   }
 
   h1 {
-    @apply text-6xl font-semibold;
+    @apply text-5xl lg:text-6xl font-semibold;
   }
 
   form input {
@@ -32,6 +32,6 @@
 
 @layer components {
   .blue-btn {
-    @apply bg-gradient-to-tr from-[#002584] to-[#0098EA] transition-all duration-500 bg-size-400 bg-pos-passive hover:bg-pos-hover disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed;
+    @apply bg-gradient-to-tl from-blue-900 to-cyan-400 transition-all duration-500 bg-size-200 bg-pos-passive hover:bg-pos-hover disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed;
   }
 }

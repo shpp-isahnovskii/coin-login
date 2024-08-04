@@ -1,5 +1,6 @@
 <script setup>
 import ParticleRotation from './animation/ParticleRotation.vue';
+import CreditCard from './animation/CreditCard.vue';
 import { ref, onMounted } from 'vue';
 
 const INTERVAL_FREQUENCY = 300;
@@ -36,10 +37,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex items-center justify-center overflow-hidden">
+  <div class="flex items-center justify-center overflow-visible sm:py-6">
     <div
-      class="w-[40.5vw] h-[40.5vw] relative flex items-center justify-center"
+      class="w-64 h-64 sm:scale-[1.2] lg:scale-[1.8] relative flex items-center justify-center"
     >
+      <CreditCard />
       <template v-for="(icons, index) in data" :key="index">
         <ParticleRotation
           v-if="timer <= index"

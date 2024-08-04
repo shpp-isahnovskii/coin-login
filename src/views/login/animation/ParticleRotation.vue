@@ -2,7 +2,7 @@
 import { gsap } from 'gsap';
 import { onMounted, ref } from 'vue';
 
-const ROTATION_SPEED_BASE = 100;
+const ROTATION_BASE_SPEED = 100;
 
 const props = defineProps({
   scale: { type: Number, required: true },
@@ -13,7 +13,9 @@ const props = defineProps({
 });
 
 const iconSize = (size) => {
-  return size === 'small' ? 'w-10 h-10' : 'w-20 h-20';
+  return size === 'small'
+    ? 'w-5 h-5'
+    : 'w-10 h-10';
 };
 
 const orbit = ref(null);
@@ -33,7 +35,7 @@ onMounted(() => {
     orbit.value,
     {
       rotation: '360deg',
-      duration: ROTATION_SPEED_BASE * props.scale,
+      duration: ROTATION_BASE_SPEED * props.scale,
       repeat: -1,
       ease: 'none',
     },
@@ -44,7 +46,7 @@ onMounted(() => {
       node,
       {
         rotation: '-360deg',
-        duration: ROTATION_SPEED_BASE * props.scale,
+        duration: ROTATION_BASE_SPEED * props.scale,
         repeat: -1,
         ease: 'none',
       },
@@ -64,8 +66,7 @@ const scenePreset = () => {
 
   images.value.forEach((node, index) => {
     const sections = props.icons.length;
-    const radians =
-      (segmentMathRandom(360, sections, index) * Math.PI) / 180; // x° * π / 180°
+    const radians = (segmentAngleMathRandom(sections, index) * Math.PI) / 180; // x° * π / 180°
     gsap.set(node, {
       scale: '0',
       x: radius + Math.cos(radians) * radius,
@@ -74,11 +75,11 @@ const scenePreset = () => {
   });
 };
 
-const segmentMathRandom = (maxDeg, sections, current) => {
-  const sectionSize = Math.floor(maxDeg / sections);
+const segmentAngleMathRandom = (sections, current) => {
+  const sectionSize = Math.floor(360 / sections);
   const max = sectionSize * (current + 1);
   const min = sectionSize * current;
-  return getMathRandom(min, max); //return random x° value based on the value between min° and max° for the current section. 
+  return getMathRandom(min, max); //return random x° value based on the value between min° and max° for the current section.
 };
 
 const getMathRandom = (min, max) => {
