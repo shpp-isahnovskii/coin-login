@@ -27,7 +27,7 @@ const data = [
   },
   {
     scale: 0.5,
-    component: [{ size: 'regular', link: Image.Polygon }],
+    icons: [{ size: 'regular', component: Image.Polygon }],
   },
 ];
 
