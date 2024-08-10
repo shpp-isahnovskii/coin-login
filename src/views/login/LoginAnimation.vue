@@ -3,23 +3,31 @@ import ParticleRotation from './animation/ParticleRotation.vue';
 import CreditCard from './animation/CreditCard.vue';
 import { ref, onMounted } from 'vue';
 
+import { Image } from '@/components/';
+
 const INTERVAL_FREQUENCY = 300;
 
 const data = [
   {
     scale: 1,
     icons: [
-      { size: 'small', link: '/coins/ftx.png', alt: 'FTX' },
-      { size: 'small', link: '/coins/dash.png', alt: 'dash' },
+      { size: 'small', component: Image.FTX },
+      { size: 'small', component: Image.Dash },
     ],
   },
   {
     scale: 0.75,
-    icons: [{ size: 'regular', link: '/coins/solana.png', alt: 'Solana' }],
+    icons: [
+      {
+        size: 'regular',
+        component: Image.Solana,
+  
+      },
+    ],
   },
   {
     scale: 0.5,
-    icons: [{ size: 'regular', link: '/coins/polygon.png', alt: 'Polygon' }],
+    component: [{ size: 'regular', link: Image.Polygon }],
   },
 ];
 

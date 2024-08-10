@@ -7,7 +7,7 @@ const ROTATION_BASE_SPEED = 100;
 const props = defineProps({
   scale: { type: Number, required: true },
   icons: {
-    type: [{ size: ['regular', 'small'], link: String, alt: String }],
+    type: [{ size: ['regular', 'small'], component: Object }],
     required: true,
   },
 });
@@ -97,7 +97,7 @@ const getMathRandom = (min, max) => {
         :key="icon.alt"
         ref="images"
       >
-        <img :src="icon.link" :alt="icon.alt" />
+        <component :is="icon.component"></component>
       </div>
     </div>
   </div>
