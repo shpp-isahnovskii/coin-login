@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/coin-login/',
+  base: process.env.VITE_BASE_URL,
   plugins: [vue()],
   resolve: {
     alias: {
